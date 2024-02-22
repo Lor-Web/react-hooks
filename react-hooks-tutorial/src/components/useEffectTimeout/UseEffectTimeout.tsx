@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import  {ChangeEvent, useEffect, useState} from "react";
 
 export const UseEffectTimeoutComponent = () => {
     const [inputValue, setInputValue] = useState<string>('');
@@ -15,7 +15,7 @@ export const UseEffectTimeoutComponent = () => {
 
     }, [inputValue]);
 
-    const changeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const changeValue = (event: ChangeEvent<HTMLInputElement>) => {
         console.log('change:', event.target.value)
         setInputValue(event.target.value)
     }
